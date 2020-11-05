@@ -8,102 +8,152 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    .mb-3, .my-3 {
+      margin-bottom: 0px !important;
+    }
+
+    .brand {
+      max-width: 200px;
+    }
+
+    .brand img {
+      width: 200px;
+    }
+
+    main {
+      min-height: Calc(100vh - 164px);
+    }
+
+    header .col {
+      padding: 10px;
+      margin: auto;
+    }
+
+    header {
+      margin-bottom: 10px;
+      margin-top: 5px;
+    }
+
+    footer {
+      padding: 20px;
+      background: #005EB8;
+      color: #fff;
+    }
+    </style>
 </head>
 <body>
     
 <div class="container-fluid">
-<h1>Header with logo and links</h1>
-<hr>
+<header>
+<div class="row">
 
-<div class="alert alert-primary">
-        <div class="row" style="height: 40px">
-          <div class="col">
-            <span style="font-size: 1.4rem;">Mrs Demo Patient</span>
-          </div>
-          <div class="col text-center">
-            CRN: 123456
-          </div>
-          <div class="col text-center">
-            NNN: 1234567890
-          </div>
-          <div class="col text-center">
-            09/02/1985 (35)
-          </div>
-          <div class="col text-center">
-            Female
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <a tabindex="0"
-                    class="btn btn-primary" 
-                    role="button" 
-                    data-html="true" 
-                    data-toggle="popover" 
-                    data-trigger="focus" 
-                    data-content="
-                    <div>
-                    <p><b>Address:</b><br>
-                    32 Hilltop Drive <br>
-                    Llan <br>
-                    Newport <br>
-                    NP20 1KJ
-                    </p>
-                    <hr>
-                    <b>Home:</b> - 01443 456 789<br>
-                    <b>Mobile:</b> - 07896 451 321<br>
-                    <b>Work:</b> - 01443 555 555<br>
-                    </div>
-                    " data-placement="bottom">
-                    Contact Details</a>
-                    
-                    <a tabindex="0"
-                    class="btn btn-primary" 
-                    role="button" 
-                    data-html="true" 
-                    data-toggle="popover" 
-                    data-trigger="focus" 
-                    data-content="
-                    <div>
-                    <p><b>Name:</b>
-                    James Hill <br>
-                    <b>Relationship</b> Partner
-                    </p>
-                    <hr>
-                    <b>Home:</b> - 01443 456 789<br>
-                    <b>Mobile:</b> - 07896 451 321<br>
-                    <b>Work:</b> - 01443 555 555<br>
-                    </div>
-                    " data-placement="bottom">
-                    Next of Kin</a>
-
-                    <a tabindex="0"
-                    class="btn btn-primary" 
-                    role="button" 
-                    data-html="true" 
-                    data-toggle="popover" 
-                    data-trigger="focus" 
-                    data-content="
-                    <div>
-                    <p>GP Info</p>
-                    </div>
-                    " data-placement="bottom">
-                    GP Details</a>
-              </div>
-
-          <div class="col">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Patient" style="max-width:200px" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-success" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
-                </div>
-              </div>
-        </div>
-</div>
-
-
+  <div class="col brand">
+    <a href="/"><img src="cws-logo.svg"></a>
+  </div>
+  <div class="col text-right">
+    <a href="/" class="btn btn-outline-secondary"><i id="home" class="fas fa-home fa-lg"></i></a>
+    <a href="#" class="btn btn-outline-secondary"><i id="watch" class="fas fa-eye fa-lg"></i></a>
+    <a href="#" class="btn btn-outline-secondary">Wards</a>
+    <a href="#" class="btn btn-outline-secondary">Outpatients</a>
+    <a href="#" class="btn btn-outline-secondary"><i class="fas fa-cog"></i></a>
+    <a href="#" class="btn btn-danger"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+  </div>
 
 </div>
+</header>
+
+<main>
+<div class="alert alert-secondary container">
+  <table width="100%">
+
+<tr>
+  <td><h3>Mrs Demo Patient</h3></td>
+  <td>CRN: 123456</td>
+  <td>NNN: 1234567890</td>
+  <td>09/02/1985 (35)</td>
+  <td>F</td>
+</tr>
+</table>
+
+<div class="row">
+  <div class="col-sm-8" style="min-width: 380px; max-width: 380px;">
+<a tabindex="0"
+    class="btn btn-dark" 
+    role="button" 
+    data-html="true" 
+    data-toggle="popover" 
+    data-trigger="focus" 
+    data-content="
+    <div>
+    <p><b>Address:</b><br>
+    32 Hilltop Drive <br>
+    Llan <br>
+    Newport <br>
+    NP20 1KJ
+    </p>
+    <hr>
+    <b>Home:</b> - 01443 456 789<br>
+    <b>Mobile:</b> - 07896 451 321<br>
+    <b>Work:</b> - 01443 555 555<br>
+    </div>
+    " data-placement="bottom">
+    Contact Details</a>
+    
+    <a tabindex="0"
+    class="btn btn-dark" 
+    role="button" 
+    data-html="true" 
+    data-toggle="popover" 
+    data-trigger="focus" 
+    data-content="
+    <div>
+    <p><b>Name:</b>
+    James Hill <br>
+    <b>Relationship</b> Partner
+    </p>
+    <hr>
+    <b>Home:</b> - 01443 456 789<br>
+    <b>Mobile:</b> - 07896 451 321<br>
+    <b>Work:</b> - 01443 555 555<br>
+    </div>
+    " data-placement="bottom">
+    Next of Kin</a>
+
+    <a tabindex="0"
+    class="btn btn-dark" 
+    role="button" 
+    data-html="true" 
+    data-toggle="popover" 
+    data-trigger="focus" 
+    data-content="
+    <div>
+    <p>GP Info</p>
+    </div>
+    " data-placement="bottom">
+    GP Details</a>
+    </div>
+    
+    <div class="col-sm-4">
+    <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Patient" style="max-width:200px" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-success" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+  wide content
+
+
+</div>
+</div>
+</main>
+<footer class="text-center">
+  Made in Wales <i class="fas fa-dragon" style="color:red;"></i> by Aneurin Bevan University Health Board.
+</footer>
 <script>
     $(document).ready(function(){
       $('[data-toggle="popover"]').popover();   
