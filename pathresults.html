@@ -11,18 +11,22 @@
     <link rel="stylesheet" href="https://abuhb.github.io/ui/nhs-colours.css">
 <style>
     #result-viewer {
-        display: flex;
-        padding: 5px;
+        min-height: 100vh;
     }
     
     #result-list {
-        width: 400px;
+        width: 250px;
+        height: 100vh;
         padding: 10px;
+        overflow: auto;
+        float: left;
+        position: fixed;
     }
 
     #result-view {
-        width: 100%;
+        width: Calc(100% - 250px);
         padding: 10px;
+        float: right;
     }
 </style>
 </head>
@@ -31,16 +35,16 @@
 
         <div id="result-viewer">
 
-                  <div id="result-list">
+                  <div id="result-list" class="nhspalegrey">
                     <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                         <option selected>Show all results</option>
                         <option value="1">Electrolyte Profile's</option>
                         <option value="2">FBC's</option>
                         <option value="3">LFT's</option>
                       </select>
-
+<p> </p>
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center nhsblue">
+                        <li class="list-group-item d-flex justify-content-between align-items-center nhsdarkblue">
                             Electrolyte Profile
                             <span class="text-right"><small><b>19/08/2020</b><br>16:36:00</small></span>
                         </li>
@@ -121,7 +125,7 @@
                                 <td>Estimated GFR</td>
                                 <td>>90</td>
                                 <td>ml/min/1.73m2</td>
-                                <td class="table-info">See Info</td>
+                                <td class="table-success">See Info</td>
                               </tr>
                             </tbody>
                           </table>
